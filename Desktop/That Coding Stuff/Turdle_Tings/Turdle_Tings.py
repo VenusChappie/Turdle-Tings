@@ -54,7 +54,7 @@ def star_spiral():
     turtle.pensize(4)
     n = 30   
     x = 144   
-    angle = 18 
+    angle = 30 
     
     for i in range(n):
           
@@ -204,6 +204,7 @@ def flowerchild():
 
 def million_stars():
     turtle.clear()
+    turtle.pensize(2)
     stars = turtle.Turtle()
     size = 360
   
@@ -222,17 +223,18 @@ def million_stars():
     
     # start drawing
     stars.pendown()
-    if size <= 10:
-        return
-    else:
-        for i in range(5):
-            
-            # moving turtle forward
-            turtle.forward(size)
-            stars(turtle, size/3)
-  
-            # moving turtle left
-            turtle.left(216)
+    def star(turtle, size):
+        if size <= 10:
+            return
+        else:
+            for i in range(5):
+                
+                # moving turtle forward
+                turtle.forward(size)
+                star(turtle, size/3)
+    
+                # moving turtle left
+                turtle.left(216)
 
 
 def get_user_input(shape_patterns):
