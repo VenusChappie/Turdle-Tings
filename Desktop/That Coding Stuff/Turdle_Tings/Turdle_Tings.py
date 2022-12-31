@@ -43,7 +43,7 @@ def direct_request(user_input):
         draw_star_spiral = star_spiral()
         return draw_star_spiral
     elif user_input == "Million Stars":
-        draw_million_stars = million_stars()
+        draw_million_stars = million_stars(360)
         return draw_million_stars
     elif user_input == "Exit":
         exit()
@@ -202,39 +202,28 @@ def flowerchild():
     turtle.end_fill()
 
 
-def million_stars():
+def million_stars(size):
     turtle.clear()
-    turtle.pensize(2)
-    stars = turtle.Turtle()
-    size = 360
-  
-    # increases the speed of turtle
-    stars.speed(10)
-    
-    # to change the background color
-    stars.getscreen().bgcolor("black")
-    stars.color("red")
-    
-    # stop drawing
-    stars.penup()
-    
-    # move the turtle
-    stars.goto((-200, 50))
-    
-    # start drawing
-    stars.pendown()
-    def star(turtle, size):
+    turtle.pensize(1)
+    turtle.speed(10)
+    turtle.color("red")
+
+    turtle.penup()
+    turtle.goto((-200, 50))
+    turtle.pendown()
+    while True:
         if size <= 10:
             return
         else:
             for i in range(5):
-                
+                # turtle.pendown()
                 # moving turtle forward
                 turtle.forward(size)
-                star(turtle, size/3)
-    
+                million_stars(size/3)
+
                 # moving turtle left
                 turtle.left(216)
+        break
 
 
 def get_user_input(shape_patterns):
