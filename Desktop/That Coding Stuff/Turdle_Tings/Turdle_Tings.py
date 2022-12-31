@@ -180,18 +180,26 @@ def flowerchild():
         if abs(turtle.pos()) < 1:
             break
     turtle.end_fill()
-    # turtle.penup()
-    # turtle.goto(-100, -100)
-    # turtle.lt(90)
-    # turtle.pendown()
-    # turtle.color('blue', 'light blue')
-    # turtle.begin_fill()
-    # for i in range()
-    #     turtle.forward(200)
-    #     turtle.left(170)
-    #     if abs(turtle.pos()) < 1:
-    #         break
-    # turtle.end_fill()
+    turtle.penup()
+    turtle.goto(-100, -100)
+    turtle.lt(90)
+    turtle.pendown()
+    turtle.color('blue', 'light blue')
+    turtle.begin_fill()
+    for i in range(1, 37):
+        turtle.forward(200)
+        turtle.left(170)
+    turtle.end_fill()
+    turtle.penup()
+    turtle.goto(100, -100)
+    turtle.lt(90)
+    turtle.pendown()
+    turtle.color('purple', 'pink')
+    turtle.begin_fill()
+    for i in range(1, 37):
+        turtle.forward(200)
+        turtle.left(170)
+    turtle.end_fill()
 
 
 def million_stars():
