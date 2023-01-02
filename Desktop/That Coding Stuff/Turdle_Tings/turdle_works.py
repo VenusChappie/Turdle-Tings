@@ -1,7 +1,7 @@
 import turtle
 import random
 import Turdle_Tings
-
+import colorsys
 
 turtle.shape("turtle")
 turtle.left(90)
@@ -162,14 +162,12 @@ def spiral():
 
 def triangle():
     turtle.clear()
-    turtle.begin_fill()
-    turtle.rt(90)
-    turtle.fd(100)
-    turtle.lt(120)
-    turtle.fd(100)
-    turtle.lt(120)
-    turtle.fd(100)
-    turtle.end_fill()
+    turtle.speed("fastest")
+    turtle.pensize(1)
+    turtle.pendown()
+    for i in range(10,1150,9):
+        turtle.fd(i)
+        turtle.left(119.3)
     turtle.penup()
     turtle.home()
 
@@ -202,6 +200,18 @@ def octagon():
         turtle.rt(5)
         turtle.end_fill()
 
+def wavey_tree():
+    hue = 0.0
+    for i in range(185):
+        col = colorsys.hsv_to_rgb(hue,1,1)
+        turtle.pencolor(col)
+        hue += 0.005
+        turtle.circle(190-i,100)
+        turtle.lt(90)
+        turtle.circle(190-i,100)
+        turtle.rt(61)
+    # turtle.hideturtle()
+
 
 def flowerchild():
     turtle.clear()
@@ -209,6 +219,7 @@ def flowerchild():
     turtle.pensize(2)
     turtle.color('red', 'yellow')
     turtle.begin_fill()
+    turtle.pendown()
     while True:
         turtle.forward(200)
         turtle.left(170)
@@ -226,7 +237,7 @@ def flowerchild():
         turtle.left(170)
     turtle.end_fill()
     turtle.penup()
-    turtle.goto(100, -100)
+    turtle.goto(100, -160)
     turtle.lt(90)
     turtle.pendown()
     turtle.color('purple', 'pink')
@@ -237,16 +248,5 @@ def flowerchild():
     turtle.end_fill()
     turtle.penup()
     turtle.home()
+    turtle.hideturtle()
 
-
-# function to draw stars
-def million_stars(size):
-
-	if size <= 10:
-		return
-	else:
-		for i in range(5):
-			turtle.forward(size)
-			million_stars(size/3)
-			turtle.left(216)
-    

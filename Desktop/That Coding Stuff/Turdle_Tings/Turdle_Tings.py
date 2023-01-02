@@ -12,13 +12,13 @@ def direct_request(user_input):
     if user_input == "Flower Child":
         bring_the_brightness = turdle_works.flowerchild()
         return bring_the_brightness
-    elif user_input == "Square That":
+    elif user_input == "Square Stack":
         draw_square = turdle_works.square()
         return draw_square
     elif user_input == "Circle Swirl":
         draw_circle = turdle_works.circle()
         return draw_circle
-    elif user_input == "Triangle":
+    elif user_input == "Triangle Twist":
         draw_triangle = turdle_works.triangle()
         return draw_triangle
     elif user_input == "Woven Basket":
@@ -31,13 +31,12 @@ def direct_request(user_input):
     elif user_input == "Star Spiral":
         draw_star_spiral = turdle_works.star_spiral()
         return draw_star_spiral
-    elif user_input == "Stary Night":
+    elif user_input == "Wavy Flower":
         turdle_works.turtle.clear()
-        turdle_works.turtle.speed(70)
+        turdle_works.turtle.speed('fastest')
         turdle_works.turtle.pensize(2)
-        turdle_works.turtle.penup()
         turdle_works.turtle.pendown()
-        draw_million_stars = turdle_works.million_stars(250)
+        draw_million_stars = turdle_works.wavey_tree()
         return draw_million_stars
     elif user_input == "Exit":
         exit()
@@ -110,9 +109,9 @@ def oh_wait_theres_more(shape_patterns):
     cool things you can get your turtle to do on your screen.
 
 
-    * Spiral Cones            * Flower Child          * Triangle
-    * Star Spiral             * Square That           * Woven Basket
-    * Stary Night             * Circle Swirl
+    * Spiral Cones            * Flower Child          * Triangle Twist
+    * Star Spiral             * Square Stack          * Woven Basket
+    * Wavy Flower             * Circle Swirl
 
     Now try a few more shapes and patterns. When you want to quit the program, 
     type "Exit" when prompted.
@@ -125,7 +124,7 @@ def valid_shape_patterns():
     Defines a list of acceptable shapes and patterns that the turtle can draw.
     Return: List: it should return a list of those shapes and patterns.
     """
-    shapes = ["Square That", "Circle Swirl", "Triangle", "Flower Child", "Star Spiral", "Spiral Cones", "Woven Basket", "Stary Night", "Star Spiral"]
+    shapes = ["Square Stack", "Circle Swirl", "Triangle Twist", "Flower Child", "Star Spiral", "Spiral Cones", "Woven Basket", "Wavy Flower", "Star Spiral"]
     return shapes
 
 
