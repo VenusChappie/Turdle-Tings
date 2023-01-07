@@ -130,12 +130,13 @@ def valid_shape_patterns():
 
 def welcome(shape_patterns):
 
-    first_consent = get_first_response()
-    if first_consent == "":
-        print(oh_wait_theres_more(shape_patterns))
-        answer = get_user_input(shape_patterns)
-        direct_request(answer)
-        return True
+    while True: 
+        first_consent = get_first_response()
+        if first_consent == "":
+            print(oh_wait_theres_more(shape_patterns))
+            answer = get_user_input(shape_patterns)
+            direct_request(answer)
+            return True
 
 
 def draw_tings():
