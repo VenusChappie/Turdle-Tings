@@ -124,7 +124,7 @@ def valid_shape_patterns():
     Defines a list of acceptable shapes and patterns that the turtle can draw.
     Return: List: it should return a list of those shapes and patterns.
     """
-    shapes = ["Square Stack", "Circle Swirl", "Triangle Twist", "Flower Child", "Star Spiral", "Spiral Cones", "Woven Basket", "Wavy Flower", "Star Spiral"]
+    shapes = ["Square Stack", "Circle Swirl", "Triangle Twist", "Flower Child", "Star Spiral", "Spiral Cones", "Woven Basket", "Wavy Flower", "Star Spiral", "Exit"]
     return shapes
 
 

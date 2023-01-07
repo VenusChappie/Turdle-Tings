@@ -201,7 +201,8 @@ def octagon():
         turtle.end_fill()
 
 def wavey_tree():
-    hue = 0.0
+    turtle.clear()
+    hue = 0
     for i in range(185):
         col = colorsys.hsv_to_rgb(hue,1,1)
         turtle.pencolor(col)
@@ -210,7 +211,7 @@ def wavey_tree():
         turtle.lt(90)
         turtle.circle(190-i,100)
         turtle.rt(61)
-    # turtle.hideturtle()
+    turtle.hideturtle()
 
 
 def flowerchild():
